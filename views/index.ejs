@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <script src="/javascripts/jquery-3.2.1.min.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+  <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-primary">
+          <div id="brand" class="col-xl-2 col-lg-3 col-md-3">
+            <a class="navbar-brand" href="/home"><b>Analizador de Mensajes de Twitter con Machine Learning</b></a>
+            <button style="float: right;" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+    </div>
+        <div class="row content-info">
+          <div class="page-header">
+            <h1 id="tables">Resultado</h1>
+          </div>
+          <% if (tweets.length>0) { %>
+            <div class="row">
+            <h2>Mensajes del usuario "<%=tweets[0].user.username%>" recuperados. En total <%=tweets.length%> mensajes.</h2>
+            <h2>Haga click en el botón para procesarlos y obtener el nombre del criminal buscado.</h2>
+            <br/>
+          </div>
+            <div class="row">
+              <form method="POST" action="/process">
+                <input type="hidden" name="username" value="<%=tweets[0].user.username%>">
+                <button type="submit" class="btn btn-primary register"><b>Procesar Mensajes</b></button>
+              </form>
+            </div>
+          <% } else { %>
+            <div class="row"><h2>No se han recuperado Mensajes. Por favor conecte la aplicación con la base de datos y filtre los mensajes del username correcto.</h2></div>
+          <% } %>
+        </div>
+  </div>
+</body>
+</html>
