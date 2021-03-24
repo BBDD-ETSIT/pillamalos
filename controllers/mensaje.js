@@ -5,5 +5,5 @@ const Mensaje = require('../models/mensaje');
 //IMPORTANTE: recuerda escribir el username con la primera letra mayúscula
 //y los devuelve en la variable return como un array
 exports.filterMensajes = async function () {
-    
+    return [];
 }
