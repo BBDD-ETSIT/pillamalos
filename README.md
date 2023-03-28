@@ -58,6 +58,6 @@ Por último podemos arrancar la plataforma con:
 $ npm start
 ```
 
-Abra un navegador y vaya a la url "http://localhost:8001" para ver la plataforma funcionando. Si la plataforma puede conectar a la base de datos y colección correcta y recibe filtrados los mensajes del username correcto, usará la Machine Learning e Inteligencia Artificial para devolver el nombre real del usuario buscado.
+Abra un navegador y vaya a la url "http://localhost:8001" (importante, sin s el http, a veces chrome fuerza y añade esa s aunque no la pongamos, usad Firefox en ese caso) para ver la plataforma funcionando. Si la plataforma puede conectar a la base de datos y colección correcta y recibe filtrados los mensajes del username correcto, usará la Machine Learning e Inteligencia Artificial para devolver el nombre real del usuario buscado.
 
 **NOTA: Cada vez que se cambie el código de la plataforma debemos parar y arrancar de nuevo el servidor. Para ello, desde el terminal pulse ctrl+c para parar y arranque de nuevo con npm start**
