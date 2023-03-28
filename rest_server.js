@@ -11,7 +11,7 @@ const vig = new crypto.Vigenere("keyword");
 const mongoose = require('mongoose');
 (async () => {
   try {
-    await mongoose.connect('mongodb://localhost/twitter',{ useNewUrlParser: true, useUnifiedTopology: true })
+    await mongoose.connect('mongodb://127.0.0.1/twitter',{ useNewUrlParser: true, useUnifiedTopology: true })
     console.log('Connected to Mongo!')
   } catch (err) {
     console.log('Error connecting to Database: ' + err)
