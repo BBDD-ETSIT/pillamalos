@@ -5,7 +5,6 @@ const MensajesController = require('./controllers/mensaje');
 
 const app = express();
 const crypto = require("text-cryptography");
-const asignatura = 'bbdd';
 const vig = new crypto.Vigenere("keyword");
 
 const mongoose = require('mongoose');
